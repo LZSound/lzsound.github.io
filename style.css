@@ -11,11 +11,46 @@ body {
   line-height: 1.7;
 }
 
-/* HERO */
+/* ================= NAV ================= */
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+
+.nav-left {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 6px;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+
+.nav-right a:hover {
+  opacity: 0.7;
+}
+
+/* ================= HERO ================= */
+
 .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  padding-top: 80px; /* spazio per menu */
 }
 
 .bg-video {
@@ -61,13 +96,18 @@ body {
   opacity: 0.8;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
+
 .section {
-  padding: 90px 20px;
+  padding: 100px 20px;
   max-width: 900px;
   margin: auto;
   text-align: center;
   animation: fadeUp 1.5s ease-out forwards;
+}
+
+.section.dark {
+  background-color: #0d0d0d;
 }
 
 .section h3 {
@@ -81,11 +121,8 @@ body {
   opacity: 0.9;
 }
 
-.section.dark {
-  background-color: #0d0d0d;
-}
+/* ================= WORKS ================= */
 
-/* WORKS */
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -108,7 +145,8 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* LINKS */
+/* ================= LINKS ================= */
+
 a {
   color: #9bbcff;
   text-decoration: none;
@@ -118,7 +156,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
   padding: 30px;
   text-align: center;
@@ -127,17 +166,47 @@ footer {
   opacity: 0.7;
 }
 
-/* ANIMATIONS */
+/* ================= ANIMATIONS ================= */
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 4.5rem;
+    letter-spacing: 8px;
+  }
+
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .nav-right a {
+    margin-left: 12px;
+    font-size: 0.65rem;
+  }
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
