@@ -1,108 +1,102 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-   <meta name="google" content="notranslate">
-  <title>LZ – Cinematic Music Composer</title>
+  <meta charset="UTF-8" />
+  <title>LZSound – Cinematic Music</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav">
+
+<!-- NAV -->
+<header class="nav">
   <div class="nav-left">LZ</div>
+
+  <nav class="nav-center">
+    <a href="#about" data-it="Chi sono" data-en="About">About</a>
+    <a href="#works" data-it="Ultime creazioni" data-en="Latest Works">Latest Works</a>
+    <a href="#contact" data-it="Contatti" data-en="Contact">Contact</a>
+  </nav>
+
   <div class="nav-right">
-    <a href="#about">About</a>
-    <a href="#works">Works</a>
-    <a href="#contact">Contact</a>
-    <a href="index.html">IT</a>
-    <a href="index-en.html">EN</a>
+    <button onclick="setLanguage('it')">IT</button>
+    <button onclick="setLanguage('en')">EN</button>
   </div>
-</nav>
-  <!-- HERO -->
-  <section class="hero">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source src="background.mp4" type="video/mp4">
-    </video>
+</header>
 
-    <div class="overlay"></div>
+<!-- HERO -->
+<section class="hero">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
 
- <div class="hero-content">
-  <div class="logo">LZ</div>
-  <div class="tagline">Cinematic Music Composer</div>
+  <div class="hero-content">
+    <h1>LZ</h1>
+    <h2 data-it="Compositore di musica cinematografica"
+        data-en="Cinematic Music Composer">
+        Cinematic Music Composer
+    </h2>
+    <a href="#contact" class="contact-btn"
+       data-it="Contattami"
+       data-en="Contact Me">Contact Me</a>
+  </div>
+</section>
 
-  <a href="#contact" class="cta-button">Contact Me</a>
-</div>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h3 data-it="Chi sono" data-en="About">About</h3>
 
-  </section>
+  <p data-it="La mia formazione musicale inizia in giovane età con lo studio della chitarra e, poco dopo, del pianoforte, strumento che diventa presto il mio principale mezzo espressivo. Da allora non ho mai smesso di suonarlo, proseguendo negli ultimi anni anche come autodidatta, affinando il mio stile attraverso ricerca, ascolto e sperimentazione. La produzione musicale nasce inizialmente come esplorazione creativa e si evolve in una vera e propria esigenza espressiva. Compongo musica cinematografica guidato dalle emozioni e dall’atmosfera, trasformando idee e sensazioni in colonne sonore pensate per accompagnare immagini, storie e mondi narrativi."
+     data-en="My musical journey began at a young age with the study of guitar and later piano, which soon became my main expressive instrument. I have never stopped playing it, continuing in recent years as a self-taught musician, refining my style through research, listening, and experimentation. Music production started as creative exploration and evolved into a true expressive necessity. I compose cinematic music driven by emotion and atmosphere, transforming ideas and sensations into soundtracks designed to support images, stories, and narrative worlds.">
+  </p>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section" id="ABOUT">
-    <h3>About</h3>
-    <p>
-      La mia formazione musicale inizia in giovane età con lo studio della chitarra
-      e, poco dopo, del pianoforte, strumento che diventa presto il mio principale
-      mezzo espressivo. Da allora non ho mai smesso di suonarlo, proseguendo negli
-      ultimi anni anche come autodidatta, affinando il mio stile attraverso ricerca,
-      ascolto e sperimentazione.
-      <br><br>
-      La produzione musicale nasce inizialmente come esplorazione creativa e si
-      evolve in una vera e propria esigenza espressiva. Compongo musica cinematografica
-      guidato dalle emozioni e dall’atmosfera, trasformando idee e sensazioni in
-      colonne sonore pensate per accompagnare immagini, storie e mondi narrativi.
-    </p>
-  </section>
+<!-- WORKS -->
+<section id="works" class="section dark">
+  <h3 data-it="Ultime creazioni" data-en="Latest Works">Latest Works</h3>
 
-  <!-- WORKS -->
-  <section class="section dark" id="works">
-    <h3>Latest Works</h3>
+  <ul class="works-list">
+    <li><a href="https://youtu.be/7854Ye1j1Z4" target="_blank">LIGHTNING</a></li>
+    <li><a href="https://youtu.be/kV8R4rR5g4o" target="_blank">SUPERNATURAL</a></li>
+    <li><a href="https://youtu.be/oI0nACu5YJo" target="_blank">SPIRIT</a></li>
+    <li><a href="https://youtu.be/elAQMna36Bg" target="_blank">OUTERWORLD</a></li>
+  </ul>
+</section>
 
-    <div class="works-grid">
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h3 data-it="Contatti" data-en="Contact">Contact</h3>
 
-      <div class="work-item">
-        <h4>LIGHTNING</h4>
-        <iframe src="https://www.youtube.com/embed/7854Ye1j1Z4" allowfullscreen></iframe>
-      </div>
+  <p data-it="Disponibile per collaborazioni: cortometraggi, film, trailer."
+     data-en="Available for collaborations: short films, feature films, trailers.">
+  </p>
 
-      <div class="work-item">
-        <h4>SUPERNATURAL</h4>
-        <iframe src="https://www.youtube.com/embed/kV8R4rR5g4o" allowfullscreen></iframe>
-      </div>
+  <p>Email: <a href="mailto:lzsoundcin@gmail.com">lzsoundcin@gmail.com</a></p>
 
-      <div class="work-item">
-        <h4>SPIRIT</h4>
-        <iframe src="https://www.youtube.com/embed/oI0nACu5YJo" allowfullscreen></iframe>
-      </div>
+  <div class="socials">
+    <a href="https://youtube.com/@lzsoundcinema" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/lz_sounds" target="_blank">Instagram</a>
+  </div>
+</section>
 
-      <div class="work-item">
-        <h4>OUTERWORLD</h4>
-        <iframe src="https://www.youtube.com/embed/elAQMna36Bg" allowfullscreen></iframe>
-      </div>
+<footer>
+  © LZSound – Cinematic Music
+</footer>
 
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <h3>Contact</h3>
-
-    <p>Available for collaborations: short films, feature films, trailers.</p>
-
-    <p>
-      Email: <a href="mailto:lzsoundcin@gmail.com">lzsoundcin@gmail.com</a><br><br>
-      <a href="https://youtube.com/@lzsoundcinema" target="_blank">YouTube</a><br>
-      <a href="https://www.instagram.com/lz_sounds" target="_blank">Instagram</a>
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © LZSound – Cinematic Music
-  </footer>
+<!-- LANGUAGE SCRIPT -->
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-it]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+  setLanguage('it');
+</script>
 
 </body>
 </html>
