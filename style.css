@@ -6,69 +6,61 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #050505;
+  background: #050505;
   color: #e0e0e0;
-  line-height: 1.7;
 }
 
-/* ================= NAV ================= */
-
+/* NAV */
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 40px;
+  height: 70px;
+  background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
-  z-index: 999;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .nav-left {
   font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  letter-spacing: 6px;
+  font-size: 1.8rem;
 }
 
-.nav-right a {
-  margin-left: 20px;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #e0e0e0;
-}
-
-.nav-right a:hover {
-  opacity: 0.7;
-}
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
-  position: relative;
   height: 100vh;
-  overflow: hidden;
-  padding-top: 80px; /* spazio per menu */
+  position: relative;
 }
 
 .bg-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translate(-50%, -50%);
-  z-index: -2;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: -1;
+  background: rgba(0,0,0,0.7);
 }
 
 .hero-content {
@@ -79,35 +71,38 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: fadeIn 2s ease-out forwards;
 }
 
-.logo {
+.hero h1 {
   font-family: 'Cinzel', serif;
-  font-size: 7rem;
-  letter-spacing: 12px;
+  font-size: 6rem;
+  letter-spacing: 10px;
 }
 
-.tagline {
+.hero h2 {
   font-size: 0.9rem;
-  letter-spacing: 6px;
-  margin-top: 15px;
-  text-transform: uppercase;
-  opacity: 0.8;
+  letter-spacing: 4px;
+  margin: 15px 0 30px;
 }
 
-/* ================= SECTIONS ================= */
+.contact-btn {
+  border: 1px solid white;
+  padding: 12px 30px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
 
+/* SECTIONS */
 .section {
   padding: 100px 20px;
   max-width: 900px;
   margin: auto;
   text-align: center;
-  animation: fadeUp 1.5s ease-out forwards;
 }
 
 .section.dark {
-  background-color: #0d0d0d;
+  background: #0d0d0d;
 }
 
 .section h3 {
@@ -116,117 +111,29 @@ body {
   margin-bottom: 30px;
 }
 
-.section p {
-  font-size: 0.95rem;
-  opacity: 0.9;
+.works-list {
+  list-style: none;
 }
 
-/* ================= WORKS ================= */
-
-.works-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
+.works-list li {
+  margin: 15px 0;
 }
 
-.work-item h4 {
-  font-family: 'Cinzel', serif;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-}
-
-.work-item iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-}
-
-/* ================= LINKS ================= */
-
-a {
+.works-list a {
   color: #9bbcff;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.socials a {
+  margin: 0 10px;
+  color: #9bbcff;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer {
   padding: 30px;
+  background: black;
   text-align: center;
   font-size: 0.8rem;
-  background-color: #000;
-  opacity: 0.7;
-}
-
-/* ================= ANIMATIONS ================= */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-  .logo {
-    font-size: 4.5rem;
-    letter-spacing: 8px;
-  }
-
-  .nav {
-    padding: 15px 20px;
-  }
-
-  .nav-right a {
-    margin-left: 12px;
-    font-size: 0.65rem;
-  }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* ================= CTA BUTTON ================= */
-
-.cta-button {
-  margin-top: 40px;
-  padding: 14px 38px;
-  border: 1px solid rgba(255,255,255,0.6);
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.75rem;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #ffffff;
-  color: #000000;
-  text-decoration: none;
 }
