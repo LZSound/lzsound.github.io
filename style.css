@@ -137,3 +137,22 @@ footer {
   text-align: center;
   font-size: 0.8rem;
 }
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.work-item h4 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.work-item iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
