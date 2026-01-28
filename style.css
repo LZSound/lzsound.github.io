@@ -212,3 +212,21 @@ footer {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ================= CTA BUTTON ================= */
+
+.cta-button {
+  margin-top: 40px;
+  padding: 14px 38px;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+}
